@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<!set webpage color as black>
+	<style>body{background-color: #000000;}	</style>
+	<!set header to add description>
+    <head>
+		<br><br><br><br>
+		<table align="center">
+			<tr>
+				<td style="text-align: center; background-color: #44a7c5; height: 50px; width: 600px;"><small><span style="font-weight: bold; color: white; font-family: Verdana; font-size:250%;">CMSC 207 Assignment #1</span></small></td>
+			</tr>
+		</table>
+		<table align="center">
+			<tr>
+				<td style="text-align: center; background-color: #44a7c5; height: 35px; width: 600px;"><small><span style="font-weight: bold; color: white; font-family: Verdana; font-size:150%;">WebCalculator</span></small></td>
+			</tr>
+		</table>
+    </head>
+	<!start of functional calculator and design>
+    <body>
+		<br><br>
+		<div align="center">
+			<form name="webcalc">
+				<!input box to display calculator results>
+				<input type="text" name="calcval" style="text-align:right; border:2px solid gray; font-size:45px; background-color: #d3d3d3; padding: 20px; box-sizing: border-box; border-radius: 4px;"/>
+				<br><br>
+				<!clear button to reset calculator>
+				<input type="button" value="Clear" onclick="webcalc.calcval.value = ''" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 410px; height: 80px"/>
+				<br><br>
+				<!numerical values and operators set on a 4x4 table format (first row)>
+				<input type="button" value="7" onclick="webcalc.calcval.value += '7'" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/>
+				<input type="button" value="8" onclick="webcalc.calcval.value += '8'" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/>
+				<input type="button" value="9" onclick="webcalc.calcval.value += '9'" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/>	
+				<input type="button" value="/" onclick="webcalc.calcval.value += '/'" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/>				
+				<br><br>
+				<!numerical values and operators set on a 4x4 table format (second row)>
+				<input type="button" value="4" onclick="webcalc.calcval.value += '4'" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/>
+				<input type="button" value="5" onclick="webcalc.calcval.value += '5'" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/>
+				<input type="button" value="6" onclick="webcalc.calcval.value += '6'" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/> 
+				<input type="button" value="x" onclick="webcalc.calcval.value += '*'" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/>
+				<br><br>
+				<!numerical values and operators set on a 4x4 table format (third row)>
+				<input type="button" value="1" onclick="webcalc.calcval.value += '1'" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/>
+				<input type="button" value="2" onclick="webcalc.calcval.value += '2'" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/>
+				<input type="button" value="3" onclick="webcalc.calcval.value += '3'" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/>
+				<input type="button" value="-" onclick="webcalc.calcval.value += '-'" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/>				
+				<br><br>
+				<!numerical values and operators set on a 4x4 table format (fourth row)>
+				<input type="button" value="0" onclick="webcalc.calcval.value += '0'" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/>
+				<input type="button" value="." onclick="webcalc.calcval.value += '.'" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/>
+				<input type="button" value="=" onclick="webcalc.calcval.value = eval(webcalc.calcval.value)" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/>
+				<input type="button" value="+" onclick="webcalc.calcval.value += '+'" style="border:2px solid gray; font-weight: bold; font-size:30px; background-color: #000000; color: white; padding: 12px; box-sizing: border-box;border-radius: 4px; width: 100px; height: 80px"/>
+				<br>  
+			</form>
+			<br><br><br>
+		</div>
+		<!paragraph input for name and course subject>
+		<p style="text-align: center">
+			<font color="#ffffff" size="2" face="Verdana">
+				<b>Michelle Ann Ramos Cabusay</b>
+				<br>CMSC 207 Web Programming and Development<br>
+			</font>
+		</p>
+    </body>
+</html>
